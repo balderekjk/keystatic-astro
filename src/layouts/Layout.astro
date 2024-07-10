@@ -14,10 +14,10 @@ const { frontmatter = {}, title = 'dreary-diskus' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
-    />
+    /> -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title || title}</title>
@@ -28,9 +28,9 @@ const { frontmatter = {}, title = 'dreary-diskus' } = Astro.props;
     <NavMenu />
     <Banner />
     <div
-      class="mt-8 lg:mx-20 mx-8 lg:gap-10 grid lg:grid-cols-[2fr_1fr] grid-cols-1 [&_a]:text-[#469f28] [&_a:visited]:text-[hsl(300,100%,39%)] [&_.hint]:dark:text-slate-400"
+      class="mt-12 lg:mx-20 mx-8 lg:gap-10 grid lg:grid-cols-[2fr_1fr] grid-cols-1 [&_a]:text-[#469f28] [&_a:visited]:text-[hsl(300,100%,39%)] [&_.hint]:dark:text-slate-400"
     >
-      <div class="mb-8">
+      <div id="mc" class="mb-8">
         <slot />
       </div>
       <div class="grid gap-6 max-w-[400px] mx-auto h-fit mb-12">

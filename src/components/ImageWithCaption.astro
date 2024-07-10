@@ -1,55 +1,27 @@
 ---
 const { src, alt, caption, float, width, height } = Astro.props;
+let marginClass = 'mx-auto';
+let floatClass = 'sm:float-none';
+switch (float) {
+  case 'left':
+    marginClass = 'sm:mr-6';
+    floatClass = 'sm:float-left';
+    break;
+  case 'right':
+    marginClass = 'sm:ml-6';
+    floatClass = 'sm:float-right';
+}
 ---
 
-<figure class={`image-figure ${float}`}>
-  <img src={src} alt={alt} width={width} height={height} />
-  {caption && <figcaption>{caption}</figcaption>}
+<figure
+  class=`text-center ${floatClass} float-none sm:max-w-[50%] ${marginClass} mx-0 mt-0 mb-4 [&+*+*]:clear-both`
+>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    class="max-w-[100%] h-auto"
+  />
+  <figcaption>{caption}</figcaption>
 </figure>
-
-<style>
-  .image-figure {
-    margin: 0;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .image-figure img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .image-figure figcaption {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-    color: #666;
-  }
-
-  @media (min-width: 640px) {
-    .image-figure {
-      max-width: 50%;
-    }
-
-    .image-figure.left {
-      float: left;
-      margin-right: 1.5rem;
-    }
-
-    .image-figure.right {
-      float: right;
-      margin-left: 1.5rem;
-    }
-
-    .image-figure.none {
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-</style>
-
-<style is:global>
-  .image-figure + * + * {
-    clear: both;
-  }
-</style>

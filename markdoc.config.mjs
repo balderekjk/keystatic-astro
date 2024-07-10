@@ -14,17 +14,4 @@ export default defineMarkdocConfig({
       },
     },
   },
-  annotations: {
-    class: {
-      render: (children, { class: className }) => ({
-        type: 'element',
-        name: 'span',
-        attributes: { class: className },
-        children,
-      }),
-      attributes: {
-        class: { type: String, required: true },
-      },
-    },
-  },
 });

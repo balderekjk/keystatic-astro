@@ -3,7 +3,7 @@ layout: '../layouts/Layout.astro'
 title: 'NHEA - register'
 ---
 
-<h1 class="font-[400] text-primary">2024 NHEA Convention Registration</h1>
+<h1 class="font-[400] primary">2024 NHEA Convention Registration</h1>
 
 To register, please complete the form below. We highly recommend using an email address only once for each registered person to prevent possible registration issues. The registration fee for this convention is $300 per person.
 
