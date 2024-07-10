@@ -9,24 +9,47 @@ const { src, alt, caption, float, width, height } = Astro.props;
 
 <style>
   .image-figure {
-    margin: 1rem;
+    margin: 0;
+    text-align: center;
     max-width: 100%;
   }
+
   .image-figure img {
     max-width: 100%;
     height: auto;
   }
-  .image-figure.left {
-    float: left;
-    margin-right: 1rem;
-  }
-  .image-figure.right {
-    float: right;
-    margin-left: 1rem;
-  }
+
   .image-figure figcaption {
-    text-align: center;
+    margin-top: 0.5em;
     font-size: 0.9em;
     color: #666;
+  }
+
+  @media (min-width: 640px) {
+    .image-figure {
+      max-width: 50%;
+    }
+
+    .image-figure.left {
+      float: left;
+      margin-right: 1.5rem;
+    }
+
+    .image-figure.right {
+      float: right;
+      margin-left: 1.5rem;
+    }
+
+    .image-figure.none {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
+<style is:global>
+  .image-figure + * + * {
+    clear: both;
   }
 </style>

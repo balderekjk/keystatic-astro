@@ -1,0 +1,9 @@
+---
+const { float = "none", width = "200px", height = "300px", src="https://picsum.photos/seed/picsum/200/300", alt = "", caption = "" } = Astro.props
+const marginClass = float == "right" ? "ml-6" : float == "left" ? "mr-6" : "mx-auto"
+---
+
+<figure class=`text-center sm:float-${float} float-none sm:max-w-[50%] sm:${marginClass} mx-0 my-0`>
+  <img src={src} alt={alt} width={width} height={height} class="max-w-[100%] h-auto" />
+  <figcaption>{caption}</figcaption>
+</figure>

@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 18px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4em;
+  font-weight: 600;
+}
+main:first-child {
+  margin-top: 0;
+}
+p {
+  line-height: 1.4em;
+}
+strong {
+  font-weight: 600;
+}
+a {
+  text-underline-offset: 5px;
+}
+hr {
+  border: 1px solid hsl(0, 0%, 65%);
+}
+pre {
+  padding: 0.5rem;
+}
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+blockquote {
+  box-shadow: -3px 0 0 silver;
+  margin-right: 10px;
+  margin-left: 0.25rem;
+}
+blockquote p {
+  margin-left: 18px;
+  padding: 0;
+}
+blockquote {
+  overflow: auto;
+}
+blockquote.success {
+  box-shadow: -3px 0 0 green;
+}
+blockquote.error {
+  box-shadow: -3px 0 0 red;
+}
+blockquote.warning {
+  box-shadow: -3px 0 0 gold;
+}
+table {
+  border: 1px solid gray;
+}
+th,
+td {
+  outline: 1px solid silver;
+  padding: 6px 12px;
+}
+form {
+  border: 2px solid silver;
+  border-radius: 0.5rem;
+  padding: 0 1rem 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 615px;
+}
+form label {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+form input:not([type='radio']) {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+form input {
+  padding: 0.25rem;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  accent-color: darkgreen;
+}
+form blockquote {
+  margin-left: 0.25rem;
+}
+.text-primary {
+  color: #469f28;
+}
+.hint {
+  color: #374151;
+  margin-top: 0.25rem;
+}

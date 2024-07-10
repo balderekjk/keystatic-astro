@@ -18,7 +18,7 @@ export default config({
           options: {
             image: {
               directory: 'src/assets/images/posts',
-              publicPath: '../../assets/images/posts/',
+              publicPath: '../src/assets/images/posts/',
             },
           },
           components: {
@@ -27,10 +27,14 @@ export default config({
               schema: {
                 src: fields.image({
                   label: 'Image',
-                  directory: 'public/images',
-                  publicPath: '/images/',
+                  directory: 'src/assets/images/posts',
+                  publicPath: '../src/assets/images/posts/',
+                  validation: { isRequired: true },
                 }),
-                alt: fields.text({ label: 'Alt Text' }),
+                alt: fields.text({
+                  label: 'Alt Text',
+                  validation: { isRequired: true },
+                }),
                 caption: fields.text({ label: 'Caption' }),
                 float: fields.select({
                   label: 'Float',
@@ -43,11 +47,9 @@ export default config({
                 }),
                 width: fields.text({
                   label: 'Width',
-                  defaultValue: '300px',
                 }),
                 height: fields.text({
                   label: 'Height',
-                  defaultValue: '200px',
                 }),
               },
             }),
